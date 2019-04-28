@@ -1,0 +1,21 @@
+#home{
+	padding-top: 20rem;
+ 	padding-bottom: 20rem;
+	display: flex;
+	width: 100%;
+	margin-top: 70px;
+	justify-content: center;
+	background: url(../img/amigos1.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% ;
+}
+
+#texto-home{
+	text-align: center;
+}
+#home h4{
+	font-size: 25px;
+}
+#home p{
+	font-size: 20px;
+}
