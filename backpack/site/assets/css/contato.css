@@ -5,5 +5,24 @@
     background: url(../img/cidades1.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding: 20rem 0 20rem 0;
+    padding: 6rem 0 6rem 0;
+}
+
+.fundo{
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+.row{
+  background: linear-gradient(white, rgb(245,225,250,0.6));
+  border-radius: 15px;
+  border: 7px solid #4a4e69;
+}
+
+#ou{
+  display: flex;
+  align-items: center;
 }
