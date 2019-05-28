@@ -1,32 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Karma&display=swap"');
+
 #home{
-	padding-top: 14rem;
- 	padding-bottom: 10rem;
+	padding-top: 180px;
+ 	padding-bottom: 300px;
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 	width: 100%;
 	margin-top: 70px;
-	justify-content: center;
-	background: url(../img/amigos2.jpg);
-	background-position-y: 50%;
-	background-repeat: no-repeat;
+	background: white;
 	background-size: 100% ;
+	margin: 0;	
+	background-image: url(../img/airplane3.jpg);
+	background-repeat: no-repeat;
+	
 }
 
 #texto-home{
 	text-align: center;
 	font-size: 20px;
-	background-image: linear-gradient(white, rgb(245,225,250,0.6));
-	border-radius: 15px;
-	margin-left:400px;
-	margin-right: 400px;
-	color: #4a4e69;
+	border-radius: 15px;	
+	color: white;
 	padding: 20px;
-	border: 7px solid #4a4e69;
 }
 #home h4{
 	font-size: 25px;
 	padding-bottom: 20px;
+	font-family: "Comfortaa",sans-serif;
 }
 #home p{
 	font-size: 20px;
 	padding-bottom: 20px;
+	margin-left: 300px;
+	margin-right: 300px;
+	font-family: sans-serif;
 }
+
+

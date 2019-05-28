@@ -1,9 +1,9 @@
 #barra-fixa {
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   height: 70px;
-  background: #3b3b3b;
+  background: white;
   z-index: 10;
 }
 
@@ -36,36 +36,36 @@
   background: #ff5757;
 }
 
-#menu-hamb{
-	float: right;
-  margin-top:10px;
+#menu-hamb {
+  float: right;
+  margin-top: 10px;
   margin-right: 10px;
   margin-left: 100px;
 }
 
-#novidades{
-	height: 300px;
+#novidades {
+  height: 300px;
   border: 2px solid red;
-  margin-top: 90px;
+  margin-top: 20px;
   margin-bottom: 20px;
-  display:flex;
+  display: flex;
 }
 
-#historico-futuras{
-	height: 300px;
-	border: 2px solid red;
+#historico-futuras {
+  height: 300px;
+  border: 2px solid red;
   margin-bottom: 20px;
-  display:flex;
+  display: flex;
 }
 
-#viajantes-procurando{
-	height: 300px;
-	border: 2px solid red;
+#viajantes-procurando {
+  height: 300px;
+  border: 2px solid red;
   margin-bottom: 20px;
-  display:flex;
+  display: flex;
 }
 
-.divs{
+.divs {
   width: 350px;
   height: 250px;
   margin-top: 25px;
@@ -76,22 +76,45 @@
 }
 
 
-h1{
-  font-size: 40px;
-  font-family: "Baloo", cursive;
-  color: white;
+h1 {
+  font-size: 30px;
+  font-family: "Comfortaa", cursive;
+  color: #3b3b3b;
   margin-right: 100px;
   font-weight: lighter;
-  margin-top:15px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+
 }
 
-#backtitle{
-  text-decoration:none;
-  color:white; 
-  
+#backtitle {
+  text-decoration: none;
+  color: #3b3b3b;
 }
 
+.btn {
+  border: none;
+}
 
+#busca,
+option {
+  font-family: 'Comfortaa', sans-serif;
+}
 
+.custom-select {
+  border-radius:5px;
+  height: 40px;
+}
 
+h3 {
+  margin-top: 50px;
+}
+
+.inputBusca{
+  border-radius: 5px;
+  border: 1px solid rgba(201, 201, 201, 0.685);
+  height: 40px;
+}
+ 
+#tamanho {
+  margin-top: 20px;
+}

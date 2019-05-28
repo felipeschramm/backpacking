@@ -6,6 +6,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300");
 @import url('https://fonts.googleapis.com/css?family=Baloo&display=swap');
+
 @font-face {
   font-family: "TrajanPro-Regular";
   font-weight: normal;
@@ -32,8 +33,9 @@
   top: 0;
   width: 100%;
   height: 70px;
-  background:#3b3b3b;
+  background: white;
   z-index: 10;
+  margin: 0px;
 }
 
 #container {
@@ -45,16 +47,16 @@
 
 #backtitle{
     text-decoration:none;
-    color:white; 
+    color:#3b3b3b; 
 }
 
 h1{
-  font-size: 40px;
-  font-family: "Baloo", cursive;
-  color: white;
+  font-size: 30px;
+  font-family: "Comfortaa", cursive;
+  color: #3b3b3b;
   margin-right: 100px;
   font-weight: lighter;
-  margin-top:15px;
+  margin-top:20px;
 }
 @media only screen and (max-width: 480px) {
   #container {
@@ -121,7 +123,7 @@ h1{
 
 #menu a {
   font-family:"Comfortaa", cursive;
-  color: white;
+  color: #3b3b3b;
   font-size: 14.5px;
   text-decoration: none;
 }

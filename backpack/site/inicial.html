@@ -10,7 +10,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="icon" href="../site/assets/img/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/inicial.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
 
@@ -20,15 +21,15 @@
     <header>
         <div id="barra-fixa">
             <div id="container">
-                <a href=""><img id="logo" src="../site/assets/img/logo.png"></a>
+                <a href="../site/inicial.html"><img id="logo" src="../site/assets/img/mountain3.png"></a>
                 <div>
                     <h1>
-                    <a id="backtitle" href="">Backpacking</a>
+                        <a id="backtitle" href="../site/inicial.html">Backpacking</a>
                     </h1>
                 </div>
 
                 <div id="busca">
-                    <select>
+                    <select class="custom-select">
                         <option>
                             Buscar Anfitriões
                         </option>
@@ -39,7 +40,7 @@
                             Buscar Cidades
                         </option>
                     </select>
-                    <input placeholder="Digite aqui">
+                    <input class="inputBusca" placeholder="Digite aqui">
                 </div>
                 <button type="button" class="btn btn-primary" id="tamanho">Ir</button>
 
@@ -50,9 +51,17 @@
                     </button>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="../site/perfil.html">
+                            <i class="fa fa-user" aria-hidden="true"></i>&nbsp;Meu Perfil</a>
+                        <a class="dropdown-item" href="../site/atualizar.html">
                             <i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Atualizar Perfil</a>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="../site/cadastro.html">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Criar Hospedagem</a>
+                        <a class="dropdown-item" href="../site/hospedagem.html">
+                            <i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Gerenciar Hospedagem</a>
+                        <a class="dropdown-item" href="../site/requisicoes.html">
+                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp;Minhas Requisições</a>
+                        <a class="dropdown-item" href="../site/index.html">
                             <i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Sair</a>
                     </div>
                 </div>
@@ -62,8 +71,11 @@
 
     <section>
         <div class="container">
+            <h3>
+                Novidades
+            </h3>
             <div id=novidades>
-                <div class="divs">NOVIDADES</div>
+                <div class="divs"></div>
                 <div class="divs"></div>
                 <div class="divs"></div>
             </div>
@@ -73,7 +85,7 @@
     <section>
         <div class="container">
             <div id="historico-futuras">
-                <div class="divs">NOVIDADES</div>
+                <div class="divs"></div>
                 <div class="divs"></div>
                 <div class="divs"></div>
             </div>
@@ -82,8 +94,11 @@
 
     <section>
         <div class="container">
+            <h3>
+                Veja também
+            </h3>
             <div id="viajantes-procurando">
-                <div class="divs">NOVIDADES</div>
+                <div class="divs"></div>
                 <div class="divs"></div>
                 <div class="divs"></div>
             </div>
@@ -119,14 +134,14 @@
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
 <script src="../site/javascript.js"></script>
 
 </html>
