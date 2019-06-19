@@ -1,0 +1,524 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300");
+  @import url('https://fonts.googleapis.com/css?family=Baloo&display=swap');
+  
+  @font-face {
+    font-family: "TrajanPro-Regular";
+    font-weight: normal;
+    src: url("/fonts/TrajanPro-Regular.eot?") format("eot"), url("/fonts/TrajanPro-Regular.woff") format("woff"),
+      url("/fonts/TrajanPro-Regular.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "After Midnite Regular";
+    font-weight: bold;
+    src: url("/fonts/AfterMidnite.eot?") format("eot"), url("/fonts/AfterMidnite.woff") format("woff"),
+      url("/fonts/AfterMidnite.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Comfortaa";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Comfortaa"), url("../../assets/fonts/Comfortaa_Regular.woff") format("woff");
+  }
+  
+  #barra-fixa {
+    position: fixed!important;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: white;
+    z-index: 10;
+    margin: 0px;
+  }
+  
+  #container {
+    width: 1140px;
+    height: 70px;
+    margin: 0 auto;
+    display:flex;
+  }
+  
+  #backtitle{
+      text-decoration:none;
+      color:#3b3b3b; 
+  }
+  
+  h1{
+    font-size: 30px;
+    font-family: "Comfortaa", cursive;
+    color: #3b3b3b;
+    margin-right: 100px;
+    font-weight: lighter;
+    margin-top:20px;
+  }
+  @media only screen and (max-width: 480px) {
+    #container {
+      height: 60px;
+    }
+  }
+  
+  #logo {
+    position: relative;
+    float: left;
+    height: 65px;
+    margin: 3px 5px 0px 5px;
+  }
+  @media only screen and (max-width: 1200px) {
+    #logo {
+      height: 60px;
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    #logo {
+      height: 50px;
+      margin-top: 10px;
+    }
+  }
+  
+  #menu {
+    position: relative;
+    float: right;
+      padding-right: 10px;
+      font-family:"Comfortaa",cursive;
+  }
+  
+  .item-menu {
+    position: relative;
+    float: right;
+    margin: 20px;
+    padding-top: 5px;
+    list-style: none;
+    font-family: "Comfortaa";
+  }
+  
+  .item-menu:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #cb6ce6;
+    transition: width 0.2s ease;
+  }
+  
+  .item-menu:hover:after {
+    width: 100%;
+    left: 0;
+    background: #ff5757;
+  }
+  
+  #menu ul {
+    list-style: none;
+    float:left;
+  }
+  
+  #menu a {
+    font-family:"Comfortaa", cursive;
+    color: #3b3b3b;
+    font-size: 14.5px;
+    text-decoration: none;
+  }
+  @media only screen and (max-width: 1115px) {
+    #menu a {
+      display: none;
+    }
+  }
+  
+  h2 {
+    font-size: 90px;
+  }
+  
+  h3 {
+    font-size: 60px;
+  }
+  
+  #menu-hamburguer {
+    width: 40px;
+    position: fixed;
+    transition: all 0.25s ease-in-out 0s;
+    top: 15px;
+    right: 15px;
+    height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid #f2e9e4;
+    cursor: pointer;
+    opacity: 0;
+  }
+  @media only screen and (min-width: 1115px) {
+    #menu-hamburguer {
+      display: none;
+    }
+  }
+  
+  .menu {
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border: 1px solid #f2e9e4;
+  }
+  @media only screen and (min-width: 1115px) {
+    .menu {
+      display: none;
+    }
+  }
+  
+  .hamburguer {
+    position: relative;
+    display: block;
+    background: #f2e9e4;
+    width: 22px;
+    height: 1px;
+    top: 19px;
+    right: -8px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  label {
+    cursor: pointer;
+  }
+  
+  .hamburguer::before,
+  .hamburguer::after {
+    background: #f2e9e4;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .hamburguer::before {
+    top: -10px;
+  }
+  
+  .hamburguer::after {
+    bottom: -10px;
+  }
+  
+  #menu-hamburguer:checked ~ label .hamburguer {
+    transform: rotate(45deg);
+  }
+  
+  #menu-hamburguer:checked ~ label .hamburguer::before {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  
+  #menu-hamburguer:checked ~ label .hamburguer::after {
+    bottom: 0px;
+    transform: rotate(90deg);
+  }
+  
+  #menu-hamburguer:checked ~ label .menu {
+    box-shadow: 0 0 0 130vw #4a4e69, 0 0 0 100vh #4a4e69;
+    opacity: 1;
+  }
+  
+  #menu-hamburguer:checked ~ ul {
+    top: 350px;
+    opacity: 1;
+  }
+  
+  .lista-hamburguer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.25 1s ease-in-out;
+  }
+  
+  .lista-hamburguer li a {
+    display: block;
+    margin: 10px 20px;
+    color: #f2e9e4;
+    font-size: 5rem;
+    text-decoration: none;
+  }
+  @media only screen and (min-width: 1115px) {
+    .lista-hamburguer li a {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 360px) {
+    .lista-hamburguer li a {
+      font-size: 3rem;
+    }
+  }
+  
+  .lista-hamburguer li a:hover {
+    color: #22223b;
+  }
+  
+  .lista-hamburguer li {
+    list-style: none;
+  }
+  
+  #texto-home h4 {
+    margin-bottom: 20px;
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Karma&display=swap"');
+
+#home{
+	padding-top: 180px;
+ 	padding-bottom: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	margin-top: 70px;
+	background: white;
+	background-size: 100% ;
+	margin: 0;	
+	background-image: url(../../assets/img/airplane3.jpg);
+	background-repeat: no-repeat;
+	
+}
+
+#texto-home{
+	text-align: center;
+	font-size: 20px;
+	border-radius: 15px;	
+	color: white;
+	padding: 20px;
+}
+#home h4{
+	font-size: 25px;
+	padding-bottom: 20px;
+	font-family: "Comfortaa",sans-serif;
+}
+#home p{
+	font-size: 20px;
+	padding-bottom: 20px;
+	margin-left: 300px;
+	margin-right: 300px;
+	font-family: sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Karma&display=swap"');
+
+#como{
+	display: flex;
+	flex-direction: column;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding-top: 3rem;
+	padding-bottom: 7rem;
+	background-position-y: 50%;
+	background-image: url(../../assets/img/beach.jpg);
+}
+
+#container-como{
+	font-size: 20px;
+	border-radius: 15px;
+	margin-left:400px;
+	margin-right: 400px;
+	color: #3b3b3b;
+	padding: 30px 40px 20px 40px;
+	background-color: #ffffffaf;
+}
+
+#como h4{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+#como p{
+	font-weight: bold;
+	color: #ff5757;
+}
+
+#titulo-como h3{
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+	color: white;
+	font-weight: bold;
+	font-size: 26px;
+	width: 700px;
+	margin-bottom: 56px;
+	font-family: 'Comfortaa', sans-serif;
+
+}
+
+#titulo-div{
+	text-align: center;
+	margin-bottom: 20px;
+	font-family: 'Karma', sans-serif;
+}
+
+ul{
+	font-family: "Comfortaa", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Karma&display=swap"');
+
+#login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	justify-content: center;
+	width: 100%;
+  background-color: white;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.fundo{
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+.row{
+  background: white;
+  border-radius: 15px;
+}
+
+#ou{
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background-color: #cb6ce6;
+  border: none;
+}
+
+.btn:hover{
+  background-color: #ff5757;
+}
+
+#titleLogin{
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: bolder;
+  color: #3b3b3b;
+  padding-bottom: 40px;
+}
+
+.container {
+  padding-bottom: 100px;
+}
+
+#depoimentos{
+    background-image: url(../../assets/img/city2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top:4rem;
+    padding-bottom: 50px;
+}
+
+#img-depoimentos-centro{
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    margin-bottom: 3rem;
+}
+
+#depo-texto{
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    width: 600px;
+    margin-bottom: 56px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.texto-coluna-2{
+    font-family: TrajanPro-Regular,sans-serif;
+    color: #3b3b3b;
+    opacity: 0.9;
+    text-align: center;
+    padding: 0 10%;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 20px;
+    font-weight: 300;
+}
+
+.barra{
+    display: flex;
+    justify-content: center;
+    content: "";
+    width: 8em;
+    height: 1px;
+    background-color: #3b3b3b;
+    margin-bottom: 40px;
+}
+
+.foto-depo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.nomes{
+    display: flex;
+    justify-content: center;
+    font-size: 21px;
+    color: #3b3b3b;
+    font-weight: bold;
+}
+
+.datas{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #3b3b3b;
+    font-size: 1.25rem;
+    margin-top: 7px;
+}
+
+.duas-colunas{
+    display: flex;
+    justify-content: center;
+    margin: 0 100px 1rem 100px;
+}
+.coluna{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-left:20px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+
+#depoimentos img{
+    width: 250px;
+    height: 250px;
+    filter: grayscale(100%);
+    border-radius: 50%;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
