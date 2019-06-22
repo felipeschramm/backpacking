@@ -43,38 +43,27 @@
     margin-left: 100px;
   }
   
-  #novidades {
-    height: 300px;
-    border: 2px solid red;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  .linha {
+    height: 400px;
     display: flex;
   }
-  
-  #historico-futuras {
-    height: 300px;
-    border: 2px solid red;
+
+  .linha img{
+    border: 5px solid #cb6ce6;
     margin-bottom: 20px;
-    display: flex;
+    width: 320px;
+    height: 200px;
   }
   
-  #viajantes-procurando {
-    height: 300px;
-    border: 2px solid red;
-    margin-bottom: 20px;
-    display: flex;
+  .column{
+    width: 300px;
+    margin-left: 50px;
+    margin-top: 30px;
   }
-  
-  .divs {
-    width: 350px;
-    height: 250px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: 20px;
-    margin-right: 20px;
-    border: 2px solid red;
+
+  .coluna:hover{
+    opacity: 0.4;
   }
-  
   
   h1 {
     font-size: 30px;
@@ -117,4 +106,20 @@
    
   #tamanho {
     margin-top: 20px;
+  }
+
+  .footer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .aga3{
+    margin-top: 70px;
+    font-size: 35px;
+  }
+
+  .linha p{
+    text-align: center;
+    color: black;
   }

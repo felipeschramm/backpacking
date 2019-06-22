@@ -7,7 +7,11 @@ class TripController {
     return res.json(products);
   }
   async store(req, res) {
-    const product = await Trip.create(req.body);
+    const{nome} = req.body;
+    
+    const product = await Trip.create({
+      nome
+    });
     
     return res.json(product);
   }
@@ -24,6 +28,11 @@ class TripController {
   async destroy(req, res) {
     await Trip.findByIdAndRemove(req.params.id);
     return res.send({ deleted: true });
+  }
+
+  async selectCity(req,res){
+    const cidade = await Trip.findOne({"cidade":req.params.cidade});
+    return res.json(cidade);
   }
 }
 

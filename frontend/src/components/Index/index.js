@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import "./styles.css";
 import axios from 'axios';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import mountain3 from "../../assets/img/mountain3.png";
 import depo1 from "../../assets/img/depo1.jpg";
 import depo2 from "../../assets/img/depo2.png";
 
 class Index extends Component {
-	/*AXIOS COMECA AQUI*/ 
+	/*AXIOS COMECA AQUI*//*
+	bancooooooooooooooooooooooooooooo login
 	state = {
 		backpack: []
 	};
@@ -25,29 +26,15 @@ class Index extends Component {
 
 	componentDidMount() {
 		this.pegarApi();
-	}
-	/*AXIOS ACABA AQUI*/ 
+	}*/
+	/*AXIOS ACABA AQUI*/
 
-	verificar = function (l, s) {
+	login() {
 
-		if (l == "1" && s == "1") {
+		const t = document.getElementById("lo").value
+		const senha = document.getElementById("senha").value
 
-			return true;
-
-		} else {
-
-			return false;
-
-		}
-
-	}
-
-	login(){
-
-		const t = document.getElementsById("lo").value
-		const senha = document.getElementsById("senha").value
-
-		if (this.verificar(t, senha)) {
+		if (t === "1" && senha === "1") {
 
 			window.open('./Inicial/inicial.js', '_blank').focus();
 
@@ -102,12 +89,13 @@ class Index extends Component {
 		alert('teste login');
 
 	}
+	
 	render() {
 		return <>
 			<header>
 				<div id="barra-fixa">
 					<div id="container">
-							<Link to="/"><img id="logo" src={mountain3} alt="imagem logo"></img></Link>
+						<Link to="/"><img id="logo" src={mountain3} alt="imagem logo"></img></Link>
 						<div>
 							<h1><Link id="backtitle" to="/">Backpacking</Link></h1>
 						</div>
@@ -115,10 +103,10 @@ class Index extends Component {
 						<nav>
 							<div id="menu">
 								<ul>
-									<li className="item-menu"><Link href="#login">ENTRE</Link></li>
-									<li className="item-menu"><Link href="#depoimentos">DEPOIMENTOS</Link></li>
-									<li className="item-menu"><Link href="#como">COMO FUNCIONA</Link></li>
-									<li className="item-menu"><Link href="#home">SOBRE NÓS</Link></li>
+									<li className="item-menu"><Link to="#login">ENTRE</Link></li>
+									<li className="item-menu"><Link to="#depoimentos">DEPOIMENTOS</Link></li>
+									<li className="item-menu"><Link to="#como">COMO FUNCIONA</Link></li>
+									<li className="item-menu"><Link to="#home">SOBRE NÓS</Link></li>
 								</ul>
 							</div>
 						</nav>
@@ -126,17 +114,17 @@ class Index extends Component {
 
 					<div>
 						<input type="checkbox" id="menu-hamburguer" />
-						<label for="menu-hamburguer">
+						<label htmlFor="menu-hamburguer">
 							<div className="menu">
 								<span className="hamburguer"></span>
 							</div>
 						</label>
 
 						<ul className="lista-hamburguer">
-							<li><Link href="#home">SOBRE NÓS</Link></li>
-							<li><Link href="#como">COMO FUNCIONA</Link></li>
-							<li><Link href="#depoimentos">DEPOIMENTOS</Link></li>
-							<li><Link href="#login">ENTRE</Link></li>
+							<li><Link to="#home">SOBRE NÓS</Link></li>
+							<li><Link to="#como">COMO FUNCIONA</Link></li>
+							<li><Link to="#depoimentos">DEPOIMENTOS</Link></li>
+							<li><Link to="#login">ENTRE</Link></li>
 						</ul>
 					</div>
 
@@ -172,10 +160,10 @@ class Index extends Component {
 								<input id="sobrenome" name="" className="form-control" placeholder="Sobreome" type="text" />
 							</div>
 							<div className="form-group input-group">
-								<input onfocusout="checkEmail()" id="email" name="" className="form-control" placeholder="Email" type="email" />
+								<input onFocus={this.checkEmail} id="email" name="" className="form-control" placeholder="Email" type="email" />
 							</div>
 							<div className="form-group input-group">
-								<input id="telefone" name="" className="form-control" placeholder="Telefone com DDD" type="tel" minlength="11" />
+								<input id="telefone" name="" className="form-control" placeholder="Telefone com DDD" type="tel" minLength="11" />
 							</div>
 
 							<div className="form-group input-group">
@@ -183,18 +171,18 @@ class Index extends Component {
 							</div>
 
 							<div className="form-group input-group">
-								<input onfocusout={this.checkLogin} id="loginCasd" className="form-control" placeholder="Criar Login" type="text" />
+								<input onFocus={this.checkLogin} id="loginCasd" className="form-control" placeholder="Criar Login" type="text" />
 							</div>
 
 							<div className="form-group input-group">
-								<input id="senhaCasd" className="form-control" placeholder="Criar Senha" type="password" minlength="8" />
+								<input id="senhaCasd" className="form-control" placeholder="Criar Senha" type="password" minLength="8" />
 							</div>
 
 							<div className="form-group input-group">
 								<input id="senhaCasdD" className="form-control" placeholder="Repetir Senha" type="password" />
 							</div>
 
-							<button id="btnCasd" onclick="window.open('./Inicial/inicial.js', '_blank').focus();" className="btn btn-lg btn-primary btn-block text-uppercase" type="submit">
+							<button id="btnCasd" onClick={this.casd} className="btn btn-lg btn-primary btn-block text-uppercase" type="submit">
 								Cadastrar-se
 					</button>
 						</div>
@@ -221,9 +209,9 @@ class Index extends Component {
 							</div>
 							{/* <!--Arrumar pra backend--> */}
 
-							<button id="b" onclick="login()" className="btn btn-lg btn-primary btn-block text-uppercase" type="submit">
+							<button id="b" onClick={this.login} className="btn btn-lg btn-primary btn-block text-uppercase" type="submit">
 								Fazer Login
-					</button>
+							</button>
 
 						</div>
 					</div>

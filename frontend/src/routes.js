@@ -9,6 +9,7 @@ import Index from "./components/Index/index"
 import Inicial from "./components/Inicial/inicial"
 import Perfil from "./components/Perfil/perfil"
 import Requisicoes from "./components/Requisicoes/requisicoes"
+import Resultados from './components/Resultados';
 
 
 function Routes(){
@@ -21,6 +22,7 @@ function Routes(){
         <Route path="/inicial" component={Inicial} />
         <Route path="/perfil" component={Perfil} />
         <Route path="/requisicoes" component={Requisicoes} />
+        <Route path="/resultados" component={Resultados} />
         </Switch>
     );
 }
